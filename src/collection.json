@@ -1,0 +1,9 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "ng-icon-lib": {
+      "description": "A blank schematic.",
+      "factory": "./ng-icon-lib/index#ngIconLib"
+    }
+  }
+}
