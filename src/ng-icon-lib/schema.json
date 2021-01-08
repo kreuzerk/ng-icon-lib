@@ -27,11 +27,24 @@
       "description": "The name of the icon library that contains the icons",
       "x-prompt": "What's the name of the icon library?"
     },
+    "defaultIconSize": {
+      "type": "string",
+      "description": "The default size of your icons",
+      "x-prompt": "What's the default size of your icons (in px)?"
+    },
     "autoInstallLibrary": {
       "alias": "gc",
       "type": "boolean",
       "description": "Should we auto install your icon library?",
+      "x-prompt": "Do you want us to automatically install the library?",
       "default": true
+    },
+    "project": {
+      "type": "string",
+      "description": "The name of the project.",
+      "$default": {
+        "$source": "projectName"
+      }
     }
   },
   "required": ["name", "iconType", "iconInterface", "iconLibraryName", "autoInstallLibrary"]

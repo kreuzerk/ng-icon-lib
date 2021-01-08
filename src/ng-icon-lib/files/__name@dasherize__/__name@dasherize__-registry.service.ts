@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { <%= capitalize(iconType) %>, <%= capitalize(iconInterface) %>} from '<%= libName %>';
+import { <%= capitalize(iconType) %>, <%= capitalize(iconInterface) %>} from '<%= iconLibraryName %>';
 
 @Injectable({
     providedIn: 'any'

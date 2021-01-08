@@ -3,7 +3,8 @@
   "schematics": {
     "ng-icon-lib": {
       "description": "A blank schematic.",
-      "factory": "./ng-icon-lib/index#ngIconLib"
+      "factory": "./ng-icon-lib/index#ngIconLib",
+      "schema": "./ng-icon-lib/schema.json"
     }
   }
 }

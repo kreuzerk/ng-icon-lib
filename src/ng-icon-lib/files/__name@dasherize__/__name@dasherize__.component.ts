@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, ElementRef, HostBinding, Inject, Input, Optional, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ElementRef, Inject, Input, Optional} from '@angular/core';
 import {DOCUMENT} from '@angular/common';
 
 import {<%= capitalize(name) %>Registry} from './<%= dasherize(name) %>-registry.service';
@@ -8,14 +8,14 @@ import {<%= capitalize(name) %>Registry} from './<%= dasherize(name) %>-registry
     template: `
         <ng-content></ng-content>
     `,
-    styles: [':host::ng-deep svg{width: <%= width %>px; height: <%= width %>px}'],
+    styles: [':host::ng-deep svg{width: <%= defaultIconSize %>px; height: <%= defaultIconSize %>px}'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class <%= capitalize(name) %>Component {
     private svgIcon: SVGElement;
 
     @Input()
-    set name(iconName: <%= dasherize(modelName) %>) {
+    set name(iconName: <%= dasherize(iconInterface) %>) {
         if (this.svgIcon) {
             this.element.nativeElement.removeChild(this.svgIcon);
         }
