@@ -54,26 +54,6 @@ export function ngIconLib(_options: any): Rule {
         packageName: _options.iconLibraryName
       }));
     }
-
-    /*
-    if (_options.generateModule || _options.generateComponent) {
-      rules.push(
-          externalSchematic('@schematics/angular', 'module', {
-            ...moduleSchematicsOptions,
-            project: projectName
-          })
-      );
-    }
-
-    if (_options.generateComponent) {
-      rules.push(
-          externalSchematic('@schematics/angular', 'component', {
-            ...componentSchematicsOptions,
-            project: projectName
-          })
-      );
-    }
-     */
     return chain(rules);
   }
 }
