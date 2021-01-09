@@ -12,6 +12,7 @@ import {
 } from '@angular-devkit/schematics';
 import { strings } from '@angular-devkit/core';
 import { parseName } from '@schematics/angular/utility/parse-name';
+import {NodePackageInstallTask} from '@angular-devkit/schematics/tasks';
 
 // You don't have to export the function as default. You can also have more than one rule factory
 // per file.
@@ -47,6 +48,12 @@ export function ngIconLib(_options: any): Rule {
     ]);
 
     const rules = [mergeWith(sourceTemplateParametrized)];
+
+    if(_options.installLibrary) {
+      _context.addTask(new NodePackageInstallTask({
+        packageName: _options.iconLibraryName
+      }));
+    }
 
     /*
     if (_options.generateModule || _options.generateComponent) {

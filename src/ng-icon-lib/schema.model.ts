@@ -4,5 +4,5 @@ export interface Schema {
     iconType: string;
     iconInterface: string;
     iconLibraryName?: string;
-    autoInstallLibrary: boolean;
+    installLibrary: boolean;
 }

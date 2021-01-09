@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { <%= capitalize(name) %>Component } from '.<%= dasherize(iconInterface) %>/.component';
+import { <%= capitalize(camelize(name)) %>Component } from './<%= dasherize(name) %>.component';
 
 @NgModule({
-    declarations: [<%= capitalize(name) %>Component],
-    exports: [<%= capitalize(name) %>Component],
+    declarations: [<%= capitalize(camelize(name)) %>Component],
+    exports: [<%= capitalize(camelize(name)) %>Component],
     imports: [CommonModule]
 })
-export class <%= capitalize(name) %>Module {}
+export class <%= capitalize(camelize(name)) %>Module {}

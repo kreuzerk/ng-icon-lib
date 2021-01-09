@@ -32,7 +32,7 @@
       "description": "The default size of your icons",
       "x-prompt": "What's the default size of your icons (in px)?"
     },
-    "autoInstallLibrary": {
+    "installLibrary": {
       "alias": "gc",
       "type": "boolean",
       "description": "Should we auto install your icon library?",
@@ -47,5 +47,5 @@
       }
     }
   },
-  "required": ["name", "iconType", "iconInterface", "iconLibraryName", "autoInstallLibrary"]
+  "required": ["name", "iconType", "iconInterface", "iconLibraryName", "installLibrary"]
 }
